@@ -1,7 +1,9 @@
+import 'dotenv/config'
 import pgPromise from 'pg-promise'
 
+const { DB_USER, DB_PASSWORD, DB_NAME } = process.env
 const pgp = pgPromise()
-const db = pgp('postgresql://dba:dba@paybank-db:5432/UserDB')
+const db = pgp(`postgresql://${DB_USER}:${DB_PASSWORD}@paybank-db:5432/${DB_NAME}`)
 
 export async function get2FACode() {
   type TwoFactorCodeResult = {
