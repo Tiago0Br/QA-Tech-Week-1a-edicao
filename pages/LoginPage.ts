@@ -23,6 +23,12 @@ export class LoginPage {
     await this.page.getByRole('button', { name: 'Continuar' }).click()
   }
 
+  async waitFor2FACode() {
+    await this.page.getByRole('heading', { name: 'Verificação em duas etapas' }).waitFor({
+      timeout: 5000
+    })
+  }
+
   async fill2FACode(code: string) {
     await this.page.getByRole('textbox', { name: '000000' }).fill(code)
     await this.page.getByRole('button', { name: 'Verificar' }).click()

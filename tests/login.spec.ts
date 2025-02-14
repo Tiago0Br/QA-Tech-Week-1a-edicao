@@ -1,6 +1,6 @@
 import { test } from '@playwright/test'
-import { get2FACode } from '../support/db'
 import { LoginPage, DashPage } from '../pages'
+import { getTwoFactorCode, cleanJobs } from '../support/redis'
 
 let loginPage: LoginPage
 let dashPage: DashPage
@@ -25,17 +25,19 @@ test('should not login if the code is invalid', async () => {
   await loginPage.errorMessageShouldBe('Código inválido. Por favor, tente novamente.')
 })
 
-test('should login if the code is valid', async ({ page }) => {
+test('should login if the code is valid', async () => {
   const user = {
     cpf: '00000014141',
     password: '147258'
   }
 
+  await cleanJobs()
+
   await loginPage.fillCpf(user.cpf)
   await loginPage.fillPassword(user.password)
+  await loginPage.waitFor2FACode()
 
-  await page.waitForTimeout(2000)
-  const code = await get2FACode()
+  const code = await getTwoFactorCode()
 
   await loginPage.fill2FACode(code)
   await dashPage.dashboardShouldBeVisible()
