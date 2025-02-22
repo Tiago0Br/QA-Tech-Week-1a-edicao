@@ -51,6 +51,25 @@
   dependencies:
     undici-types "~6.20.0"
 
+allure-commandline@^2.32.2:
+  version "2.32.2"
+  resolved "https://registry.yarnpkg.com/allure-commandline/-/allure-commandline-2.32.2.tgz#dfdfde73c2791eb95739aa361594dbd2e01c4df8"
+  integrity sha512-+O+a4laukvO/jqWLV/PenQo4an9igZgo+TuAX10D+Do4K03EPyCcmxCel/EXp8NUMb3ExErrrozyX/0o6I8qbA==
+
+allure-js-commons@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/allure-js-commons/-/allure-js-commons-3.2.0.tgz#064503cec8735564599c90fff5a239c36d016d66"
+  integrity sha512-UXRo3D6/XEIMosro+OldWj8phJ65eSOYaAUlThOpl6nJJ0sGngMpJYog+Z9FmZDo1BZn4edwLs4aAUaTgkz4Cg==
+  dependencies:
+    md5 "^2.3.0"
+
+allure-playwright@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/allure-playwright/-/allure-playwright-3.2.0.tgz#4bbb276c6785ee7a90540e0b2c93d6ccf273caa7"
+  integrity sha512-E9YNqFBXrycMaOs4x5/Tsdl4xN8Ss0yw8XnwcVUzezR3cjlPb5gUdR81G/zQsi+I3mb+UQMS21yORHKTI9W2fw==
+  dependencies:
+    allure-js-commons "3.2.0"
+
 assert-options@0.8.2:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/assert-options/-/assert-options-0.8.2.tgz#537d4607e18a65ba46bdeac0636d1a56f7b345da"
@@ -69,6 +88,11 @@ bullmq@^5.40.4:
     tslib "^2.0.0"
     uuid "^9.0.0"
 
+charenc@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/charenc/-/charenc-0.0.2.tgz#c0a1d2f3a7092e03774bfa83f14c0fc5790a8667"
+  integrity sha512-yrLQ/yVUFXkzg7EDQsPieE/53+0RlaWTs+wBrvW36cyilJ2SaDWfl4Yj7MtLTXleV9uEKefbAGUPv2/iWSooRA==
+
 cluster-key-slot@^1.1.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/cluster-key-slot/-/cluster-key-slot-1.1.2.tgz#88ddaa46906e303b5de30d3153b7d9fe0a0c19ac"
@@ -80,6 +104,11 @@ cron-parser@^4.9.0:
   integrity sha512-p0SaNjrHOnQeR8/VnfGbmg9te2kfyYSQ7Sc/j/6DtPL3JQvKxmjO9TSjNFpujqV3vEYYBvNNvXSxzyksBWAx1Q==
   dependencies:
     luxon "^3.2.1"
+
+crypt@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/crypt/-/crypt-0.0.2.tgz#88d7ff7ec0dfb86f713dc87bbb42d044d3e6c41b"
+  integrity sha512-mCxBlsHFYh9C+HVpiEacem8FEBnMXgU9gy4zmNC+SXAZNB/1idgp/aulFJ4FgCi7GPEVbfyng092GqL2k2rmow==
 
 debug@^4.3.4:
   version "4.4.0"
@@ -123,6 +152,11 @@ ioredis@^5.4.1:
     redis-parser "^3.0.0"
     standard-as-callback "^2.1.0"
 
+is-buffer@~1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
+  integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
+
 lodash.defaults@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/lodash.defaults/-/lodash.defaults-4.2.0.tgz#d09178716ffea4dde9e5fb7b37f6f0802274580c"
@@ -137,6 +171,15 @@ luxon@^3.2.1:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.5.0.tgz#6b6f65c5cd1d61d1fd19dbf07ee87a50bf4b8e20"
   integrity sha512-rh+Zjr6DNfUYR3bPwJEnuwDdqMbxZW7LOQfUN4B54+Cl+0o5zaU9RJ6bcidfDtC1cWCZXQ+nvX8bf6bAji37QQ==
+
+md5@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/md5/-/md5-2.3.0.tgz#c3da9a6aae3a30b46b7b0c349b87b110dc3bda4f"
+  integrity sha512-T1GITYmFaKuO91vxyoQMFETst+O71VUPEU3ze5GNzDm0OWdP8v1ziTaAEPUr/3kLsY3Sftgz242A1SetQiDL7g==
+  dependencies:
+    charenc "0.0.2"
+    crypt "0.0.2"
+    is-buffer "~1.1.6"
 
 ms@^2.1.3:
   version "2.1.3"

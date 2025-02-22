@@ -17,6 +17,7 @@ pipeline {
             steps {
                 echo 'Executando os testes end-to-end'
                 sh 'npm test'
+                allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
             }
         }
     }
